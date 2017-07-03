@@ -1,5 +1,6 @@
 FROM openjdk:8-jre
 
+ENV JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=file:/dev/./urandom"
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
